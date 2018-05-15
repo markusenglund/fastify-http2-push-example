@@ -3723,6 +3723,12 @@ fastify-compress@^0.6.0:
     pump "^3.0.0"
     string-to-stream "^1.1.0"
 
+fastify-favicon@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/fastify-favicon/-/fastify-favicon-0.2.2.tgz#44501a724394cee0bfe0236c7817372098d5cd0a"
+  dependencies:
+    fastify-plugin "^0.2.2"
+
 fastify-helmet@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/fastify-helmet/-/fastify-helmet-1.0.3.tgz#b50e339623119ec9800db3fcf6e4040e3465124a"
@@ -3741,7 +3747,7 @@ fastify-helmet@^1.0.3:
     referrer-policy "^1.1.0"
     x-xss-protection "^1.0.0"
 
-fastify-plugin@^0.2.1:
+fastify-plugin@^0.2.1, fastify-plugin@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-0.2.2.tgz#e01b67685fd02e87edc98670ce2acfe251a2c715"
   dependencies:

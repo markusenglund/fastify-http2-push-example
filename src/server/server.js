@@ -2,6 +2,7 @@ import path from "path";
 import { readFileSync } from "fs";
 import Fastify from "fastify";
 import serveStatic from "fastify-static";
+import serveFavicon from "fastify-favicon";
 import compress from "fastify-compress";
 import helmet from "fastify-helmet";
 
@@ -21,12 +22,11 @@ const fastify = Fastify({
 fastify
   .register(helmet)
   .register(compress)
+  .register(serveFavicon, { path: path.join(__dirname, "public/favicons/") })
   .register(serveStatic, {
     root: path.join(__dirname, "public"),
     prefix: "/static/",
     maxAge: "1y"
   })
-  .get("/", renderPage)
-  .get("/:*", renderPage)
-  .get("/:*/**", renderPage)
+  .get("*", renderPage)
   .listen(1337);
